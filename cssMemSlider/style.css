@@ -62,7 +62,7 @@ body {
 .slider .sub {
     display: flex;
     width: 70%;
-    height: 2em;
+    height: 2.3em;
 }
 
 .slider .sub .text {
@@ -119,5 +119,11 @@ body {
 
     .buttons {
         justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: large;
     }
 }
