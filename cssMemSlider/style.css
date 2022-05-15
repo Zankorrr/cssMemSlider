@@ -12,7 +12,7 @@ body {
 
 .content {
     display: flex;
-    height: 80vh;
+    height: 70vh;
     width: 95%;
     border-radius: 0.5rem;
 }
@@ -62,12 +62,14 @@ body {
 .slider .sub {
     display: flex;
     width: 70%;
+    height: 2em;
 }
 
 .slider .sub .text {
     opacity: 0;
     overflow: hidden;
     width: 0;
+    padding-top: 1em;
     transition: width 1s, opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
@@ -102,4 +104,20 @@ body {
 
 .slider .buttons .button:hover {
     filter: brightness(2);
+}
+
+@media (orientation: portrait) {
+    .content {
+        height: 60vh;
+    }
+
+    .slider {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 20vh;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
 }
