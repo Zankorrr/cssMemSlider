@@ -5,7 +5,8 @@ body {
     justify-content: space-around;
     margin: 0;
     height: 100vh;
-    background-color: rgb(69, 69, 69);
+    background-color: #454545;
+    font-size: x-large;
     color: white;
 }
 
@@ -16,6 +17,41 @@ body {
     border-radius: 0.5rem;
 }
 
+.meme {
+    width: 0;
+    border-radius: 0.5rem;
+    transition: 1s;
+}
+
+#meme1 {
+    background: url(./content/1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme2 {
+    background: url(./content/2.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme3 {
+    background: url(./content/3.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme4 {
+    background: url(./content/4.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme5 {
+    background: url(./content/5.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.content .active {
+    width: 100%;
+}
+
 .slider {
     display: flex;
     justify-content: space-between;
@@ -23,45 +59,47 @@ body {
     width: 95%;
 }
 
-.meme {
-    width: 0;
-    background: url(./content/1.jpg) no-repeat center;
-    background-size: contain;
-    border-radius: 0.5rem;
-}
-
-.meme img {
-    height: fit-content;
-}
-
-.content .active {
-    width: 100%;
-}
-
 .slider .sub {
     display: flex;
+    width: 70%;
 }
 
 .slider .sub .text {
-    display: none;
+    opacity: 0;
+    overflow: hidden;
     width: 0;
+    transition: width 1s, opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 .slider .sub .active {
-    display: contents;
+    opacity: 1;
     width: 100%;
 }
 
 .slider .buttons {
     display: flex;
-    width: 30%;
+    height: 3em;
 }
 
 .slider .buttons .button {
-    width: 1em;
     padding: 1em;
+    margin: 0.2em;
+    cursor: pointer;
+}
+
+.slider .buttons .button .icon {
+    width: 0.5em;
+    height: 0.5em;
+    border: 0.1em solid #77a6ff;
+    border-radius: 50%;
+    background-color: #77a6ff;
+    transition: 1s;
+}
+
+.slider .buttons .button .active {
+    background-color: transparent;
 }
 
 .slider .buttons .button:hover {
-    background-color: aquamarine;
+    filter: brightness(2);
 }
