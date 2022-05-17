@@ -80,7 +80,6 @@ body {
 #m5:checked ~ .slider .sub #text5 {
     opacity: 1;
     width: 100%;
-    font-stretch: ultra-expanded;
 }
 
 .slider .buttons {
@@ -118,7 +117,8 @@ label:hover {
 #m3:checked ~ .slider .buttons #l3,
 #m4:checked ~ .slider .buttons #l4,
 #m5:checked ~ .slider .buttons #l5 {
-    background-color: #ffffff;
+    outline: 0.3em solid #454545;
+    outline-offset: -2em;
 }
 
 @media (orientation: portrait) {
