@@ -83,27 +83,22 @@ body {
     height: 3em;
 }
 
-.slider .buttons .button {
-    padding: 1em;
-    margin: 0.2em;
+input[type="radio" i] {
+    appearance: none;
+    width: 4em;
+    height: 4em;
+    border: 1.3em solid #454545;
+    border-radius: 50%;
+    background-color: #77a6ff;
     cursor: pointer;
 }
 
-.slider .buttons .button .icon {
-    width: 0.5em;
-    height: 0.5em;
-    border: 0.1em solid #77a6ff;
-    border-radius: 50%;
-    background-color: #77a6ff;
-    transition: 1s;
+input[type="radio" i]:hover {
+    background-color: #ffffff;
 }
 
-.slider .buttons .button .active {
-    background-color: transparent;
-}
-
-.slider .buttons .button:hover {
-    filter: brightness(2);
+input[type="radio" i]:checked {
+    background-color: #ffffff;
 }
 
 @media (orientation: portrait) {
