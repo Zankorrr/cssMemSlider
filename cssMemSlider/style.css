@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    height: 100vh;
+    background-color: #454545;
+    font-size: x-large;
+    color: white;
+}
+
+.content {
+    display: flex;
+    height: 70vh;
+    width: 95%;
+    border-radius: 0.5rem;
+}
+
+.meme {
+    width: 0;
+    border-radius: 0.5rem;
+    transition: 1s;
+}
+
+#meme1 {
+    background: url(./content/1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme2 {
+    background: url(./content/2.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme3 {
+    background: url(./content/3.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme4 {
+    background: url(./content/4.jpg) no-repeat center;
+    background-size: contain;
+}
+
+#meme5 {
+    background: url(./content/5.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.content .active {
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    width: 95%;
+}
+
+.slider .sub {
+    display: flex;
+    width: 70%;
+    height: 2.3em;
+}
+
+.slider .sub .text {
+    opacity: 0;
+    overflow: hidden;
+    width: 0;
+    padding-top: 1em;
+    transition: width 1s, opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+#m1:checked ~ .slider .sub #text1,
+#m2:checked ~ .slider .sub #text2,
+#m3:checked ~ .slider .sub #text3,
+#m4:checked ~ .slider .sub #text4,
+#m5:checked ~ .slider .sub #text5 {
+    opacity: 1;
+    width: 100%;
+}
+
+.slider .buttons {
+    display: flex;
+    height: 3em;
+}
+
+input {
+    display: none;
+}
+
+#m1:checked ~ .content #meme1,
+#m2:checked ~ .content #meme2,
+#m3:checked ~ .content #meme3,
+#m4:checked ~ .content #meme4,
+#m5:checked ~ .content #meme5 {
+    width: 100%;
+}
+
+label {
+    width: 1em;
+    height: 1em;
+    border: 1em solid #454545;
+    border-radius: 50%;
+    background-color: #77a6ff;
+    cursor: pointer;
+}
+
+label:hover {
+    background-color: #ffffff;
+}
+
+#m1:checked ~ .slider .buttons #l1,
+#m2:checked ~ .slider .buttons #l2,
+#m3:checked ~ .slider .buttons #l3,
+#m4:checked ~ .slider .buttons #l4,
+#m5:checked ~ .slider .buttons #l5 {
+    outline: 0.3em solid #454545;
+    outline-offset: -2em;
+}
+
+@media (orientation: portrait) {
+    .content {
+        height: 60vh;
+    }
+
+    .slider {
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        height: 20vh;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        font-size: large;
+    }
+}
