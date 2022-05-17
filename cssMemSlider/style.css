@@ -73,9 +73,14 @@ body {
     transition: width 1s, opacity 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.slider .sub .active {
+#m1:checked ~ .slider .sub #text1,
+#m2:checked ~ .slider .sub #text2,
+#m3:checked ~ .slider .sub #text3,
+#m4:checked ~ .slider .sub #text4,
+#m5:checked ~ .slider .sub #text5 {
     opacity: 1;
     width: 100%;
+    font-stretch: ultra-expanded;
 }
 
 .slider .buttons {
@@ -83,21 +88,36 @@ body {
     height: 3em;
 }
 
-input[type="radio" i] {
-    appearance: none;
-    width: 4em;
-    height: 4em;
-    border: 1.3em solid #454545;
+input {
+    display: none;
+}
+
+#m1:checked ~ .content #meme1,
+#m2:checked ~ .content #meme2,
+#m3:checked ~ .content #meme3,
+#m4:checked ~ .content #meme4,
+#m5:checked ~ .content #meme5 {
+    width: 100%;
+}
+
+label {
+    width: 1em;
+    height: 1em;
+    border: 1em solid #454545;
     border-radius: 50%;
     background-color: #77a6ff;
     cursor: pointer;
 }
 
-input[type="radio" i]:hover {
+label:hover {
     background-color: #ffffff;
 }
 
-input[type="radio" i]:checked {
+#m1:checked ~ .slider .buttons #l1,
+#m2:checked ~ .slider .buttons #l2,
+#m3:checked ~ .slider .buttons #l3,
+#m4:checked ~ .slider .buttons #l4,
+#m5:checked ~ .slider .buttons #l5 {
     background-color: #ffffff;
 }
 
